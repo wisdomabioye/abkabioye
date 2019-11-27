@@ -252,7 +252,12 @@ function showPortfolio() {
 			{
 				name: "POS Payments",
 				description: "Send payments in few seconds to any bank in Nigeria. OTP[ed] and user management.",
-				link: "https://exsender.com"
+				link: "#!"
+			},
+			{
+				name: "Exclusive Platform",
+				description: "A Platform as a Service.",
+				link: "https://exclusiveplatform.com"
 			},
 			{
 				name: "CBT",
@@ -272,12 +277,12 @@ function showPortfolio() {
 			{
 				name: "Investment Bot",
 				description: "Cryptocurrency Investment Telegram bot that integrate with Coinbase API",
-				link: "https://t.me/@Crypto_Investment_Test_Bot"
+				link: "https://t.me/Crypto_Investment_Test_Bot"
 			},
 			{
 				name: "Betting Bot",
 				description: "A sport betting bot built on Telegram. Play with token/coin, set minimum correct prediction and many more",
-				link: "https://t.me/@Crypto_Betting_Test_Bot"
+				link: "https://t.me/Crypto_Betting_Test_Bot"
 			}
 
 		];
