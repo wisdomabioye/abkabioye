@@ -46,7 +46,7 @@ function showFavouriteStack() {
 		div.innerHTML = `<div class="chip" title="${stack}">${stack}</div>`;
 		fragment.appendChild(div);
 	});
-
+	/*append my favourite stack*/
 	stackContainer.appendChild(fragment);
 }
 
