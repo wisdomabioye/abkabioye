@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	M.Sidenav.init(nav, {});
 	M.Carousel.init(aboutSlide, {fullWidth: true, duration: 200});
-	M.Carousel.init(portfolioSlide, {duration: 200});
+	M.Carousel.init(portfolioSlide, {duration: 200, numVisible: 10});
 	M.Collapsible.init(collapsible, {onOpenStart: handleCollapsibleOpen, onCloseStart: handleCollapsibleClose});
 
 	var carouselInstance = M.Carousel.getInstance(document.querySelector('.carousel'));
@@ -240,6 +240,11 @@ function showPortfolio() {
 	var portfolioContainer = document.querySelectorAll('#portfolio .carousel-item');
 	var	portfolio = [
 			{
+				name: "Aider",
+				description: "Manage your finances, files, schedules and notes more securely like a pro.",
+				link: "https://aider.pro"
+			},
+			{
 				name: "Airdrop AI",
 				description: "Automate verification and participations of Airdrop, giveaway and contest.",
 				link: "https://airdropai.com"
@@ -252,7 +257,7 @@ function showPortfolio() {
 			{
 				name: "POS Payments",
 				description: "Send payments in few seconds to any bank in Nigeria. OTP[ed] and user management.",
-				link: "#!"
+				link: "https://www.ourcashpoints.com"
 			},
 			{
 				name: "Exclusive Platform",
@@ -261,18 +266,13 @@ function showPortfolio() {
 			},
 			{
 				name: "CBT",
-				description: "<strong>Starter project</strong> - Computer Based Test Application developed as starter project",
+				description: "<strong>Starter project</strong> - CBT (Legacy version)",
 				link: "http://rssl-cbtapp.herokuapp.com"
 			},
 			{
 				name: "SMS",
-				description: "<strong>Starter Project (v2 in development)</strong> - School Management System for managing results, payments, home work, staff and students.",
+				description: "<strong>Starter Project (v2 in development)</strong> - SMS (Legacy version)",
 				link: "http://rssl-smsapp.herokuapp.com"
-			},
-			{
-				name: "Bot in Seconds",
-				description: "Deploy a Telegram referral | non-referral bot within a couple of seconds. Advance options and controls",
-				link: "#!"
 			},
 			{
 				name: "Investment Bot",
