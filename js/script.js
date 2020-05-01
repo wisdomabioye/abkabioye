@@ -112,7 +112,7 @@ function showSkill() {
 		},
 		{
 			name: 'Web3',
-			percent: 80,
+			percent: 70,
 			colour: 'indigo',
 			colLenght: 's10',
 			fadeDirection: 'moveUp',
@@ -263,16 +263,6 @@ function showPortfolio() {
 				name: "Exclusive Platform",
 				description: "A Platform as a Service.",
 				link: "https://exclusiveplatform.com"
-			},
-			{
-				name: "CBT",
-				description: "<strong>Starter project</strong> - CBT (Legacy version)",
-				link: "http://rssl-cbtapp.herokuapp.com"
-			},
-			{
-				name: "SMS",
-				description: "<strong>Starter Project (v2 in development)</strong> - SMS (Legacy version)",
-				link: "http://rssl-smsapp.herokuapp.com"
 			},
 			{
 				name: "Investment Bot",
