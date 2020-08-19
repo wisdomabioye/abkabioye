@@ -32,12 +32,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	showEducation();
 	showExperience();
 	showPortfolio();
+	showInsight();
 });
 
 function showFavouriteStack() {
 	var stackContainer = document.getElementById('fav-stack');
 
-	var stacks = ['Handlebars', 'EJS', 'Bulma', 'Materializecss', 'Bootstrap', 'React', 'NextJS', 'React Native', 'Firebase', 'JQuery', 'MongooseJS', 'ExpressJS', 'KoaJS', 'Micro', 'Zeit', 'Serveless', 'App Engine', 'Cloud Functions', 'Digital Ocean', 'Mlab', 'MongoDB Atlass', 'MongoDB Stitch'];
+	var stacks = ['Handlebars', 'EJS', 'Bulma', 'Materializecss', 'Bootstrap', 'React', 'NextJS', 'Gatsby', 'React Native', 'Firebase', 'JQuery', 'MongooseJS', 'ExpressJS', 'KoaJS', 'Micro', 'Zeit', 'Serveless', 'App Engine', 'Cloud Functions', 'Digital Ocean', 'Mlab', 'MongoDB Atlass', 'MongoDB Stitch'];
 	var fragment = document.createDocumentFragment();
 
 	stacks.forEach(function(stack) {
@@ -54,7 +55,7 @@ function showSkill() {
 	var skills = [
 		{
 			name: 'HTML',
-			percent: 85,
+			percent: 92,
 			colour: 'blue',
 			colLenght: 's11',
 			fadeDirection: 'fadeInDown',
@@ -62,7 +63,7 @@ function showSkill() {
 		},
 		{
 			name: 'CSS3',
-			percent: 65,
+			percent: 75,
 			colour: 'red',
 			colLenght: 's8',
 			fadeDirection: 'fadeInUp',
@@ -70,7 +71,7 @@ function showSkill() {
 		},
 		{
 			name: 'JavaScript',
-			percent: 79,
+			percent: 86,
 			colour: 'yellow',
 			colLenght: 's10',
 			fadeDirection: 'fadeInUp',
@@ -78,7 +79,7 @@ function showSkill() {
 		},
 		{
 			name: 'MongoDB',
-			percent: 70,
+			percent: 82,
 			colour: 'green',
 			colLenght: 's9',
 			fadeDirection: 'fadeInUp',
@@ -86,7 +87,7 @@ function showSkill() {
 		},
 		{
 			name: 'NodeJS',
-			percent: 75,
+			percent: 82,
 			colour: 'blue-grey',
 			colLenght: 's10',
 			fadeDirection: 'fadeInDown',
@@ -95,7 +96,7 @@ function showSkill() {
 
 		{
 			name: 'MS [OS, Office]',
-			percent: 70,
+			percent: 85,
 			colour: 'light-blue',
 			colLenght: 's9',
 			fadeDirection: 'moveUp',
@@ -104,7 +105,7 @@ function showSkill() {
 
 		{
 			name: 'Linux',
-			percent: 60,
+			percent: 75,
 			colour: 'deep-orange',
 			colLenght: 's8',
 			fadeDirection: 'moveUp',
@@ -112,7 +113,7 @@ function showSkill() {
 		},
 		{
 			name: 'Web3',
-			percent: 70,
+			percent: 80,
 			colour: 'indigo',
 			colLenght: 's10',
 			fadeDirection: 'moveUp',
@@ -148,6 +149,48 @@ function appendSkillToContainer(skill) {
 		
 	div.innerHTML = content;
 	skillContainer.insertAdjacentElement('beforeend', div);
+}
+
+function showInsight() {
+	var insightContainer = document.getElementById('insight'),
+		insights = [
+			{
+				text: "Bot/Crawler (Telegram, Twitter, Discord, ...)",
+				icon: "icon-check green-text"
+			},
+			{
+				text: "Automation",
+				icon: "icon-check green-text"
+			},
+			{
+				text: "Decentralized App (dApp) Integration",
+				icon: "icon-check green-text"
+			},
+			{
+				text: "Smart contract (TRC-10, T/ERC-20, ERC-721, ERC-1155, Staking, etc)",
+				icon: "icon-check green-text"
+			},
+			{
+				text: "Web Application",
+				icon: "icon-check green-text"
+			},
+			{
+				text: "Mobile App (React-Native, Flutter)",
+				icon: "icon-check green-text"
+			}
+		]
+	var unorderedList = document.createElement('ul');
+		unorderedList.classList.add('collection', 'animatable', 'fadeInUp', 'delay-2s');
+	var fragment = '';
+	Array.prototype.forEach.call(insights, function(dt) {
+		fragment += `<li class="collection-item">
+						<i class="${dt.icon}"></i>
+						<span class="title"><strong>${dt.text}</strong></span>
+					</li>`;
+	})
+
+	unorderedList.innerHTML = fragment;
+	insightContainer.insertAdjacentElement('beforeend', unorderedList);
 }
 
 function showEducation() {
@@ -206,6 +249,11 @@ function showExperience() {
 	var experiencesContainer = document.querySelector('#experience > .collapsible'),
 		experiences = [
 			{
+				position: "CTO - Adors (https://adors.org) &nbsp;&nbsp;<span class='grey-text'> 2018 - 2019 </span>",
+				description: "- Produces detailed program codes and specifications<br/>- Integrate and maintain Frontend, Backend, and Crawler to ensure strong functionality <br/>",
+				icon: "icon-angle-down",
+			},
+			{
 				position: "Lead Developer - Exclusive Platform &nbsp;&nbsp;<span class='grey-text'> 2018 - 2019 </span>",
 				description: "- Produces detailed program codes and specifications<br/>- Test software products to ensure strong functionality and optimization",
 				icon: "icon-angle-down",
@@ -240,41 +288,35 @@ function showPortfolio() {
 	var portfolioContainer = document.querySelectorAll('#portfolio .carousel-item');
 	var	portfolio = [
 			{
-				name: "Aider",
+				name: "Aider (Owner)",
 				description: "Manage your finances, files, schedules and notes more securely like a pro.",
 				link: "https://aider.pro"
 			},
 			{
-				name: "Airdrop AI",
+				name: "Airdrop AI (Owner)",
 				description: "Automate verification and participations of Airdrop, giveaway and contest.",
 				link: "https://airdropai.com"
 			},
 			{
-				name: "Exsender",
+				name: "Exsender (Owner)",
 				description: "A fully automated token and ETH distributor on the Ethereum Blockchain",
 				link: "https://exsender.com"
 			},
 			{
-				name: "POS Payments",
+				name: "POS Payments (developer)",
 				description: "Send payments in few seconds to any bank in Nigeria. OTP[ed] and user management.",
 				link: "https://www.ourcashpoints.com"
 			},
 			{
-				name: "Exclusive Platform",
-				description: "A Platform as a Service.",
-				link: "https://exclusiveplatform.com"
+				name: "Ador (developer)",
+				description: "Innovation for Community, Culture and Creatives. NFT station",
+				link: "https://adors.org"
 			},
 			{
-				name: "Investment Bot",
-				description: "Cryptocurrency Investment Telegram bot that integrate with Coinbase API",
-				link: "https://t.me/Crypto_Investment_Test_Bot"
-			},
-			{
-				name: "Betting Bot",
-				description: "A sport betting bot built on Telegram. Play with token/coin, set minimum correct prediction and many more",
-				link: "https://t.me/Crypto_Betting_Test_Bot"
+				name: "Agricnode (developer)",
+				description: "Innovative Crypto Currency For Global Agricultural Transactions",
+				link: "https://node.agrichainx.com/"
 			}
-
 		];
 
 	portfolio.forEach(function(pf, index) {
